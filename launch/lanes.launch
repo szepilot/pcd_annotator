@@ -1,0 +1,16 @@
+<launch>
+    <node pkg="pcd_annotator" type="pub_pose.py" name="pub_pose_py1" output="screen">
+       <param name="csv" value="s1.csv" />
+       <param name="color" value="red" />
+    </node>
+    <node pkg="pcd_annotator" type="pub_pose.py" name="pub_pose_py2" output="screen">
+       <param name="csv" value="s2.csv" />
+       <param name="color" value="green" />
+    </node>
+    <node pkg="pcd_annotator" type="pub_pose.py" name="pub_pose_py3" output="screen">
+       <param name="csv" value="s3.csv" />
+       <param name="color" value="blue" />
+    </node>
+
+
+</launch>

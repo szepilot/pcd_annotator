@@ -1,0 +1,13 @@
+<launch>
+    <!--
+    -->
+    <param name="/use_sim_time" value="false" />
+    <node pkg="pcl_ros" type="pcd_to_pointcloud" name="spawn_pcd_to_pcl" output="screen" args ="/mnt/c/bag/pcd_zala/egesz_palya_lexus1.pcd 2.0" >
+        <param name="frame_id" value="map_zala_0" />
+        <param name="latch" value="true" />
+        <!--
+        <remap from="cloud_pcd" to="cloud_in" />-->
+    </node>
+    <node args="697237.0 5285644.0 0.0 0.0 0.0 0.0 map map_gyor_0 50" name="gyor0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+    <node args="639770.0 5195040.0 0.0 0.0 0.0 0.0 map map_zala_0 50" name="zala0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+</launch>
